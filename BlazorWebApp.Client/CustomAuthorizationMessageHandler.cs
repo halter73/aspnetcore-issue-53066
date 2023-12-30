@@ -10,7 +10,7 @@ namespace BlazorWebApp.Client
         : base(provider, navigation)
         {
             ConfigureHandler(
-                authorizedUrls: new[] { "https://www.example.com/base" });
+                authorizedUrls: new[] { "https://demo.duendesoftware.com/api/" });
         }
     }
 }

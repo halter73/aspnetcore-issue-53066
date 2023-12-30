@@ -73,11 +73,11 @@ public static class HostingExtensions
         builder.Services.AddSingleton<IUserTokenStore, ServerSideTokenStore>();
 
         // registers HTTP client that uses the managed user access token
-        //builder.Services.AddTransient<RemoteApiService>();
-        //builder.Services.AddHttpClient<RemoteApiService>(client =>
-        //{
-        //    client.BaseAddress = new Uri("https://demo.duendesoftware.com/api/");
-        //});
+        builder.Services.AddTransient<RemoteApiService>();
+        builder.Services.AddHttpClient<RemoteApiService>(client =>
+        {
+            client.BaseAddress = new Uri("https://demo.duendesoftware.com/api/");
+        });
 
         builder.Services.AddControllersWithViews();
         
